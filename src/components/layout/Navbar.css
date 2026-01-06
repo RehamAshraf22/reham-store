@@ -1,0 +1,119 @@
+/* Default Navbar (top) - Dark */
+.navbar-special-style {
+    background: rgba(2, 6, 23, 0.9);
+    border-bottom: 1px solid #6366f1;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+/* Navbar عند Scroll - شفاف + Glass */
+.navbar-special-style.navbar-scrolled {
+    background: rgba(2, 6, 23, 0.5);
+    backdrop-filter: blur(6px);
+}
+
+
+/* Logo */
+.logo .icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #6366f1, #818cf8);
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.logo:hover .icon {
+    transform: rotate(10deg) scale(1.15);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.6);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+/* Links */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #6366f1;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #818cf8 !important;
+    text-shadow: 0 0 8px rgba(129, 140, 248, 0.6);
+}
+
+/* Search */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-input {
+    background-color: #020617;
+    border: 1px solid #6366f1;
+    padding: 6px 14px;
+    border-radius: 25px;
+    color: white;
+    outline: none;
+    width: 180px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #818cf8;
+    box-shadow: 0 0 10px rgba(129, 140, 248, 0.5);
+}
+
+.search-input::placeholder {
+    color: #cfd5de;
+}
+
+/* Cart */
+.cart-btn {
+    position: relative;
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.cart-btn:hover {
+    color: #818cf8;
+    text-shadow: 0 0 6px rgba(129, 140, 248, 0.6);
+}
+
+.cart-badge {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    background-color: #6366f1;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(129, 140, 248, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .search-input {
+        width: 140px;
+    }
+}

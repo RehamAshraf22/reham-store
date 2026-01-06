@@ -1,0 +1,77 @@
+.about-page {
+    padding: 90px 20px;
+    background: linear-gradient(180deg, #f5f3ff, #ffffff);
+    text-align: center;
+}
+
+/* Badge */
+.about-badge {
+    display: inline-block;
+    background: rgba(124, 58, 237, 0.1);
+    color: #7c3aed;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+/* Title */
+.about-page h1 {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+/* Text */
+.about-page p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #374151;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+/* Actions */
+.about-actions {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: #7c3aed;
+    color: #fff;
+    padding: 14px 36px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #6d28d9;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border: 1px solid #7c3aed;
+    color: #7c3aed;
+    padding: 14px 36px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: #7c3aed;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-page p {
+        font-size: 1rem;
+    }
+}
